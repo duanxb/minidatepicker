@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MiniDatePicker时间预约插件</title>
+	<link rel="stylesheet" type="text/css" href="css/minidatepicker.css" />
+	<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/minidatepicker.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+		.inputContainer{
+			padding: 0.3rem;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="inputContainer">
+		<input type="text" readonly="true" id="minidatepick" />
+		
+		<div id="selectDates"></div>
+		
+		
+
+	</div>
+	<script type="text/javascript">
+
+		var startdate = $.datePickerPrototype.day(3,$.datePickerPrototype.now());
+
+		$("#minidatepick").minidatepicker({
+			//语言：cn中午，en英文
+			lang: "cn",
+			//开始日期：格式：2017-01-01，默认当前日期
+			startDate: startdate,
+			//可选范围，默认为7天
+			dateCycle: 60,
+			//最大选择日期个数，默认为7
+			maxSelectCount: 7,
+			//最少选择日期个数,默认为1
+			minSelectCount: 1,
+			//是否必须连续选择，默认false
+			continuity: true,
+			//默认选中日期
+			/*selectDayArr: [
+				{
+					datestr: "2017-07-15",
+					am: true,
+					pm: false
+				},
+				{
+					datestr: "2017-07-16",
+					am: false,
+					pm: true
+				},
+				{
+					datestr: "2017-07-17",
+					am: true,
+					pm: true
+				},
+				{
+					datestr: "2017-07-18",
+					am: true,
+					pm: false
+				}
+			],*/
+			// 点击清除日期前执行
+			onBeforeClear: function(selectDates) {
+				console.log(selectDates);
+			},
+			// 点击选中后日期执行
+			onSelectDay: function(ele, data, msg) {
+				//alert(msg);
+			},
+			// 点击确定按钮后执行
+			onConfirm: function(dates) {
+				console.log(dates);
+				$("#selectDates").html(JSON.stringify(dates));
+			},
+		});
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,208 @@
+@import url('../font/iconfont.css');
+
+body.openMiniDate{
+	overflow: hidden;
+	font-family: "PingFang SC","微软雅黑";
+}
+li{
+	list-style: none;
+	border: none;
+}
+.miniDatepickerWrapper{
+	width: 550px;
+	height: 100%;
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -275px;
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	
+	transform: translate3d(0, 100%, 0);
+  	animation-fill-mode: both;
+  	transition: all 0.3s ease-out;
+}
+.fadeInRight{
+	transform: none;
+	visibility: visible;
+}
+.miniDatepickTop{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #00cbcb;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	display: table;
+}
+.miniDatepickTop span:first-child{
+	display: table-cell;
+	text-align: left;
+	padding-left: 20px;
+	font-size: 15px;
+}
+.miniDatepickTop span:first-child i{
+	margin-right: 10px;
+}
+.miniDatepickTop span:last-child{
+	display: table-cell;
+	width: 76px;
+	height: 40px;
+}
+.minidateweekdays{
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	border-top: #03dbdb 1px solid;
+}
+.minidateweekdays ul{
+	widows: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	background-color: #00cbcb;
+}
+.minidateweekdays ul li{
+	flex-grow: 1;
+	text-align: center;
+	background-color: #00cbcb;
+	border-left: rgba(255,255,255,0.2) 1px solid;
+}
+.miniDatepickBottom{
+	height: 50px;
+	background-color: #F9F9F9;
+	padding: 10px;
+}
+.miniDateButton{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	background-color: transparent;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	color: #00cbcb;
+	font-size: 15px;
+	font-family: "PingFang SC";
+}
+.miniDatepickBottom .miniDateButton:first-child{
+	float: left;
+}
+.miniDatepickBottom .miniDateButton:last-child{
+	float: right;
+}
+.miniDatepickContent{
+	flex-grow: 1;
+	overflow-y: auto;
+}
+.miniDatepickContent::-webkit-scrollbar-track
+{
+	
+	border-radius: 5px;
+}
+
+.miniDatepickContent::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+.miniDatepickContent::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(rgba(2,219,219,0.2)),
+									   to(rgba(4,166,166,0.3)),
+									   color-stop(.6,rgba(53,211,211,0.8)))
+}
+.miniDateMonth span{
+	display: inline-block;
+	width: -webkit-calc(100% / 7);
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-weight: bold;
+	color: #00bcbc;
+	font-size: 18px;
+}
+.offset-1{
+	margin-left: 14.285714%;
+}
+.offset-2{
+	margin-left: 28.571428%;
+}
+.offset-3{
+	margin-left: 42.857142%;
+}
+.offset-4{
+	margin-left: 57.142856%;
+}
+.offset-5{
+	margin-left: 71.428573%;
+}
+.offset-6{
+	margin-left: 85.714284%;
+}
+.miniDatepickContent ul{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.miniDatepickContent ul li{
+	width: -webkit-calc(100% / 7);
+	border-top: #F1F1F1 1px solid;
+	text-align: center;
+	padding: 10px 0;
+}
+.miniDatepickContent ul li.disabled{
+	border-top-color: #fff; 
+}
+.miniDatepickContent ul li[data-week = '6'] .mini_day,.miniDatepickContent ul li[data-week = '0'] .mini_day{
+	color: #999;
+}
+.miniDatepickContent ul li span{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	color: #999;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.miniDatepickContent ul li span.mini_day{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	color: #333;
+	font-size: 16px;
+}
+.miniDatepickContent ul li span.active{
+	color: #00bcbc;
+}
+.miniDatepickContent ul li span.mini_day.active{
+	border-radius: 100%;
+	background-color: #00bcbc;
+	color: #fff;
+}
+.miniDatepickContent ul li span.mini_am,.miniDatepickContent ul li span.mini_pm{
+	margin-top: 2px;
+}
+.miniDatepickContent ul li span.mini_am.active,.miniDatepickContent ul li span.mini_pm.active{
+	background-color: rgba(229,53,31,0.8);
+	color: #fff;
+	border-radius: 3px;
+}
+.miniDatepickContent ul li span.mini_pm.active{
+	background-color: rgba(0, 0, 0, 0.8)
+}
