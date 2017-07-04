@@ -8,7 +8,7 @@
 
 
 
-![MiniDatePicket](https://raw.githubusercontent.com/duanxb/minidatepicker/master/minidatepicket.gif)
+![MiniDatePicket](https://raw.githubusercontent.com/duanxb/minidatepicker/master/minidatepicket.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/300)
 
 
 
