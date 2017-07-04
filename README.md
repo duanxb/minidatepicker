@@ -8,7 +8,7 @@
 
 
 
-![MiniDatePicket](https://raw.githubusercontent.com/duanxb/minidatepicker/master/minidatepicket.gif =200x)
+![MiniDatePicket](https://raw.githubusercontent.com/duanxb/minidatepicker/master/minidatepicket.gif)
 
 
 
