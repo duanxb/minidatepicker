@@ -8,7 +8,7 @@
 
 
 
-![此处输入图片的描述][1]
+![MiniDatePicket](https://raw.githubusercontent.com/duanxb/minidatepicker/master/minidatepicket.gif =200x)
 
 
 
@@ -55,4 +55,3 @@ $.datePickerPrototype.getWeek(datestr) --> 计算日期是星期几
 
 
 
-[1]: https://raw.githubusercontent.com/duanxb/minidatepicker/master/minidatepicket.gif =300x
