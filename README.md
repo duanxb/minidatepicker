@@ -70,5 +70,5 @@ $.datePickerPrototype.getWeek(datestr) --> 计算日期是星期几
 
 
 
-[1]: https://github.com/duanxb/minidatepicker/blob/master/minidatepicker.gif
+[1]: https://raw.githubusercontent.com/duanxb/minidatepicker/master/minidatepicket.gif
 
